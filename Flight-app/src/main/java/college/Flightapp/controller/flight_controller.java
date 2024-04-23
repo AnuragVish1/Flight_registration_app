@@ -1,5 +1,5 @@
 package college.Flightapp.controller;
-
+import java.lang.String;
 import college.Flightapp.entity.flights;
 import college.Flightapp.service.flight_services;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +19,14 @@ public class flight_controller {
         return "Flights available";
     }
 
-    @GetMapping ("/all_flights")
+    @GetMapping("/all_flights")
     public List<flights> getAllFlights(){
+
         return flightServices.getAllFlights();
+
     }
+
+
+
+
 }

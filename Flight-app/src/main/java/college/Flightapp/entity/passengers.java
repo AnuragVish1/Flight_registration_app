@@ -1,7 +1,6 @@
 package college.Flightapp.entity;
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.Data;
 
 @Entity
 @Data

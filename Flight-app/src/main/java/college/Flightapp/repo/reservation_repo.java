@@ -6,7 +6,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface flight_repo extends JpaRepository<flights, String> {
+public interface reservation_repo extends JpaRepository<reservation, String> {
 
+    reservation findByuser_name(String user_name);
 
 }
