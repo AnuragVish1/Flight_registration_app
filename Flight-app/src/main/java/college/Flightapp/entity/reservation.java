@@ -35,5 +35,4 @@ public class reservation {
     @JoinColumn(name = "cid_city", referencedColumnName = "cid_city")
     private citybl citybls;
 
-
 }

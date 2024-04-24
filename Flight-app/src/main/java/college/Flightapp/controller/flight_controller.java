@@ -19,14 +19,15 @@ public class flight_controller {
         return "Flights available";
     }
 
+    
+
     @GetMapping("/all_flights")
-    public List<flights> getAllFlights(){
+    public List<flights> getAllFlights() {
 
         return flightServices.getAllFlights();
 
     }
 
 
-
-
 }
+
