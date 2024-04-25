@@ -13,8 +13,9 @@ function login() {
   const [password, setPassword] = useState('');
   const [loginFailed, setLoginFailed] = useState(false);
   const [newUser, setNewUser] = useState({
-    
+
   }) 
+
 
 
   const handleSubmit = async (event) => {
