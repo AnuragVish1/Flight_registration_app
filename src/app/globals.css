@@ -1,3 +1,22 @@
+
+.main_alert{
+  background-color: white;
+  padding: 2%;
+  height: 5vh;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  border: 1px solid red;
+  color: red;
+  position: absolute;
+  top: 2%;
+}
+.description{
+  font-size: 12px;
+  font-weight: 500;
+  padding-top: 3%;
+}
 *{
   padding: 0%;
   margin: 0%;
@@ -74,8 +93,9 @@
 .image_holder{
   height: 100%;
   width: 100%;
-  
+  background-image: url("/photo-1559268950-2d7ceb2efa3a.avif");
   background-size: cover;
+  
   
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
