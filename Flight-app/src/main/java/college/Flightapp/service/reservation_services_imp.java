@@ -6,7 +6,9 @@ import college.Flightapp.repo.reservation_repo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class reservation_services_imp implements reservation_services_interface{
@@ -26,16 +28,22 @@ public class reservation_services_imp implements reservation_services_interface{
     }
 
 
-    public boolean checkUserCredentials(String username, String inputPassword) {
-
-        reservation user = reservationRepo.findByuser_name(username); // Retrieve the user entity
-        if (user != null) {
-            if (user.getPassword().equals(inputPassword))
-            {
-                return true; // Password matches
-            }
-            return false; // Compare passwords
-        }
-        return false; // User not found or password does not match
-    }
+//    public boolean checkUserCredentials(String username, String inputPassword) {
+//
+//        Optional<String> userOpt = reservationRepo.findByuser_name(username); // Retrieve the user entity
+//         // Retrieve the password entity
+//        if (userOpt.isPresent()) {
+//
+//            /*
+//            if (passwordOpt.isPresent())
+//            {
+//                return true; // Password matches
+//            }
+//
+//             */
+//
+//
+//            return true; // Compare passwords
+//        }
+//        return false; // User not found or password does not matc
 }

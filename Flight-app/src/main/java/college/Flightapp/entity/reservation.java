@@ -16,6 +16,7 @@ import javax.swing.*;
 public class reservation {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column (name = "rid")
     private int rid;
 

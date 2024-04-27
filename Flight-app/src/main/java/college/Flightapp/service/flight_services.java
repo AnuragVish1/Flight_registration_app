@@ -9,6 +9,6 @@ import java.util.List;
 public interface flight_services {
     public flights saveFlights(flights flight);
     public List<flights> getAllFlights();
-    public void print_flights(List<flights> flight);
+
 
 }
