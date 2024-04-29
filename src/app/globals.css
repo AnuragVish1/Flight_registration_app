@@ -1,21 +1,51 @@
 
 .main_alert{
   background-color: white;
-  padding: 2%;
-  height: 5vh;
-  width: 20vw;
+  padding: 1%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  height: auto;
+  width: 15rem;
   display: flex;
   flex-direction: column;
   border-radius: 8px;
-  border: 1px solid red;
+  
   color: red;
   position: absolute;
   top: 2%;
+  background-color: rgb(255, 196, 196);
+  animation: cssAnimation 2s forwards;
+  animation-delay: 4s;
+ 
+  
+  
+}
+
+
+
+@keyframes scales {
+  from {scale: 0; }
+  to {scale: 1;}
+  
+}
+
+@keyframes scaleDown {
+  from   {scale: 1;}
+  to {scale: 0;}
+}
+
+@keyframes cssAnimation {
+  0%   {opacity: 1;}
+  100% {opacity: 0;}
+}
+@-webkit-keyframes cssAnimation {
+  0%   {opacity: 1;}
+  100% {opacity: 0;}
 }
 .description{
   font-size: 12px;
   font-weight: 500;
   padding-top: 3%;
+  position: relative;
 }
 *{
   padding: 0%;
@@ -45,8 +75,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image:url("/airplane-cloud-social.jpg");
+  background-image:url("/photo-1490735891913-40897cdaafd1.avif");
   background-size: cover;
+  background-position: center;
 }
 
 .Container{
@@ -75,9 +106,15 @@
   
 }
 
+
+
 .title{
   font-size: 20px;
   
+}
+.titles{
+    font-size: 1.2rem;
+    
 }
 
 .form_page{
@@ -93,8 +130,9 @@
 .image_holder{
   height: 100%;
   width: 100%;
-  background-image: url("/photo-1559268950-2d7ceb2efa3a.avif");
+  background-image: url("/pastel-sky-flying-plane-background-portrait-28jp4pt91pyfg8dq.png");
   background-size: cover;
+  background-position: center;
   
   
   border-top-right-radius: 5px;
@@ -174,4 +212,221 @@
 .detail > p{
   font-size: 10px;
   text-align: center;
+}
+
+
+.form_registration_page{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+.details{
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 80%;
+  
+  
+}
+
+.details > label{
+  font-size: smaller;
+  color: rgb(181, 181, 181);
+  font-size: 0.65rem;
+}
+
+.details > input{
+  
+  width: auto;
+  padding: 3.5%;
+  border-radius: 8px;
+  border: 1.5px solid rgb(241, 241, 241);
+  
+  margin-bottom: 3%;
+  transition: all 0.2s ease;
+  
+}
+
+.details > input:focus{
+  border: 1.5px solid rgb(215, 215, 215);
+  outline: none;
+  
+}
+
+
+/*.detail > h3{
+  padding-bottom: 5.5%;
+  text-align: center;
+}
+*/
+.details > button{
+  padding: 4%;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  background-color: blue;
+  color: white;
+ 
+  transition: all 0.2s ease;
+}
+
+.details > button:active{
+  transform: scale(0.95,0.95);
+  transition: all 0.2s ease;
+}
+
+.details > p{
+  font-size: 10px;
+  text-align: center;
+  padding-top: 2%;
+}
+
+.form_registration{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.75rem;
+  
+}
+
+.Registration_Border_container{
+  animation: heightt 0.5s forwards;
+  height: 35rem;
+  width: 50rem;
+  backdrop-filter: blur(22px) saturate(94%);
+    -webkit-backdrop-filter: blur(22px) saturate(94%);
+    background-color: rgba(255, 255, 255, 0.38);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+
+}
+
+.Registration_Main_container{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image:url("/photo-1490735891913-40897cdaafd1.avif");
+  background-size: cover;
+  background-position: center;
+}
+
+.Registration_Container{
+  
+  animation: height2 0.5s forwards;
+  transition: all 0.2s ease;
+  width: 48rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(255, 255, 255, 0.929);
+  overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+@keyframes heightt {
+  from {height: 32rem;}
+  to {height: 35rem;}
+}
+@keyframes height2 {
+  from {height: 30rem;}
+  to {height: 33rem;}
+}
+
+
+.form_Container{
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+
+.main_dashboard_container{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-size: cover;
+  background-position: center;
+}
+
+.box{
+  background-color: rgb(255, 255, 255);
+  height: 9rem;
+  width: 70rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 2rem;
+  box-shadow: rgba(100, 100, 111, 0.099) 0px 4px 29px 0px;
+  
+}
+
+.fields{
+  height: auto;
+
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+
+}
+
+.fields > label{
+  font-weight: 600;
+}
+
+
+.fields > input{
+  width: auto;
+  padding: 3.5%;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  margin-bottom: 3%;
+  transition: all 0.2s ease;
+  height: 1.5rem;
+  width: 12rem;
+}
+
+
+.icon-seperator{
+  display: flex;
+  gap: 1.5rem;
+}
+
+
+.icon-seperator > img{
+  transform: scale(1.1,1.1);
+  background-color: rgb(255, 255, 255);
+  
+
+}
+
+.calender{
+  transform: scale(1.1,1.1);
+  background-color: rgb(255, 255, 255);
 }

@@ -5,17 +5,19 @@ import React from 'react'
 import styles from '../page.module.css'
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { AlertDestructive } from './Alertbox'
+import { useRouter } from 'next/navigation'
 
 
 
 function login() {
+  const [rid, setRid] = useState('')
   const [user_name, setuser_name] = useState('');
   const [password, setPassword] = useState('');
   const [loginFailed, setLoginFailed] = useState(false);
   const [newUser, setNewUser] = useState({
 
   }) 
-
+ const router = useRouter();
 
 
   const handleSubmit = async (event) => {
@@ -27,8 +29,8 @@ function login() {
       return user; // will return true if user is found, false otherwise
     }
     try {
-      const response = await fetch('http://localhost:8080/planes/reservation ', {
-        method: 'POST',
+      const response = await fetch('http://localhost:8080/planes/get_reservations ', {
+        method: 'GET',
         headers: {
           'Content-Type': 'application/json',
         }
@@ -42,6 +44,7 @@ function login() {
       if (isUserValid) {
       // Handle valid user
         console.log('User is valid');
+        router.push('/users/home_page');
 
       } else {
       // Handle invalid user
@@ -73,6 +76,7 @@ function login() {
             <h2>BooknFly</h2>  
             </div>
           <div className="detail">
+            
             
             <label className="user_name">User Name</label>
             <input type="user_name" placeholder="Enter your user name" value={user_name} onChange={(e) => setuser_name(e.target.value)}/>
