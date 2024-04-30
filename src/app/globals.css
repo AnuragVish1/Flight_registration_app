@@ -374,7 +374,7 @@
 .box{
   background-color: rgb(255, 255, 255);
   height: 9rem;
-  width: 70rem;
+  width: 80rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -429,4 +429,9 @@
 .calender{
   transform: scale(1.1,1.1);
   background-color: rgb(255, 255, 255);
+}
+
+.proceed_btn{
+  position: absolute;
+  
 }
